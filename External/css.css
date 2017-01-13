@@ -1,0 +1,93 @@
+body{margin:0 auto;overflow-x: hidden;overflow-y: hidden; background-color:#00244f;}
+*{box-sizing:border-box;}
+a{text-decoration:none;}
+#wrapper{width:1000px; margin:0 auto;}
+
+/*Fonts*/
+@font-face{
+    font-family:reg;
+    src:url(fonts/SFChaerilidae.ttf);}
+@font-face{
+    font-family:italic;
+    src:url(fonts/SFChaerilidae-Oblique.ttf);}
+@font-face{
+    font-family:bold;
+    src:url(fonts/SFChaerilidae-Bold.ttf);}
+@font-face{
+    font-family:boldi;
+    src:url(fonts/SFChaerilidae-BoldOblique.ttf);}
+@font-face{
+    font-family:outline;
+    src:url(fonts/SFChaerilidaeOutline.ttf);}
+@font-face{
+    font-family:outlinei;
+    src:url(fonts/SFChaerilidaeOutline-Obliqu.ttf);}
+@font-face{
+    font-family:shaded;
+    src:url(fonts/SFChaerilidaeShaded.ttf);}
+@font-face{
+    font-family:shadedi;
+    src:url(fonts/SFChaerilidaeShaded-Oblique.ttf);}
+
+/*Images*/
+#mainimg{width:100%; background-color:black;}
+.imgs{display:none; width:100%;}
+.fade{
+	-webkit-animation: fade 3s linear 1 forwards;
+	animation: fade 3s linear 1 forwards;}
+@-webkit-keyframes fade{
+	0%{opacity:0;}
+	20%{opacity:1;}
+	80%{opacity:1;}
+	100%{opacity:0;}}
+@keyframes fade{
+	0%{opacity:0;}
+	20%{opacity:1;}
+	80%{opacity:1;}
+	100%{opacity:0;}}
+
+/*Main*/
+main{
+	width:calc(100% - 200px);
+	float:right;
+	background-color:white;}
+#content{
+	overflow-y:scroll;
+	padding:15px;
+	width:100%;}
+h1{
+	font-family:shadedi;
+	font-size:40px;
+	color:#116ad2;}
+p{
+	font-family:reg;
+	font-size:22px;
+	line-height:20px;
+	color:black;}
+
+/*Nav*/
+nav{
+	width:200px;
+	height:100vh;
+	float:left;
+	padding-top:4px;
+	background:black;}
+.navdivs{
+	width:194px;
+	height:34px;
+	margin:0px 3px 4px 3px;
+	padding:5px;
+	border:2px #00244f solid;
+	background-color:grey;
+	background: linear-gradient(to top right, black, #116ad2);
+	background: -webkit-linear-gradient(left bottom, black, #116ad2);
+	background: -o-linear-gradient(bottom left, black, #116ad2);
+	background: -moz-linear-gradient(bottom left, black, #116ad2);}
+nav a{
+	font-family:bold;
+	color:white;
+	font-size:20px;
+	transition:all 0.3s ease-out;}
+nav a:hover{color:#e822ce; font-size:24px;}
+nav a:active{color:#40f81c;}
+nav a:visited{color:#a099ff;}
