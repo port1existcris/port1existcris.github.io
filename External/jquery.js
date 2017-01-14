@@ -11,7 +11,4 @@ $(document).ready(function(){
 	$(".navdivs:nth-child(10)").hide(0).show(2100);
 	$(".navdivs:nth-child(11)").hide(0).show(900);
 	$(".navdivs:nth-child(12)").hide(0).show(1900);
-	
-	$("h1").slideUp(0).delay(300).slideDown(2000);
-	$("p").slideUp(0).delay(1300).slideDown(2000);
 });
