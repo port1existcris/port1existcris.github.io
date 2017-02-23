@@ -1,32 +1,23 @@
-body{margin:0 auto;overflow-x: hidden;overflow-y: hidden; background-color:#00244f;}
+body{margin:0 auto; background-color:#00244f;}
 *{box-sizing:border-box;}
 a{text-decoration:none;}
-#wrapper{width:1000px; margin:0 auto;}
+#wrapper{
+	width:calc(100% - 200px);
+	width:-webkit-calc(100% - 200px);
+	position:absolute;
+	top:0px;
+	right:0px;
+	margin:0 auto;}
 
 /*Fonts*/
 @font-face{
-    font-family:reg;
+    font-family:SFCreg;
     src:url(fonts/SFChaerilidae.ttf);}
 @font-face{
-    font-family:italic;
-    src:url(fonts/SFChaerilidae-Oblique.ttf);}
+    font-family:SFCbold;
+    src:url(fonts/SFChaerilidae-Bold.ttf);}	
 @font-face{
-    font-family:bold;
-    src:url(fonts/SFChaerilidae-Bold.ttf);}
-@font-face{
-    font-family:boldi;
-    src:url(fonts/SFChaerilidae-BoldOblique.ttf);}
-@font-face{
-    font-family:outline;
-    src:url(fonts/SFChaerilidaeOutline.ttf);}
-@font-face{
-    font-family:outlinei;
-    src:url(fonts/SFChaerilidaeOutline-Obliqu.ttf);}
-@font-face{
-    font-family:shaded;
-    src:url(fonts/SFChaerilidaeShaded.ttf);}
-@font-face{
-    font-family:shadedi;
+    font-family:SFCshadedi;
     src:url(fonts/SFChaerilidaeShaded-Oblique.ttf);}
 
 /*Images*/
@@ -48,33 +39,34 @@ a{text-decoration:none;}
 
 /*Main*/
 main{
-	width:calc(100% - 200px);
-	float:right;
-	background-color:white;}
-#content{
-	overflow-y:scroll;
-	padding:15px;
-	width:100%;}
+	max-width:1000px;
+	margin:0px auto;
+	background-color:white;
+	display:block;}
+#content{padding:15px;}
 h1{
-	font-family:shadedi;
+	font-family:SFCshadedi, Arial, Helvetica, sans-serif;
 	font-size:40px;
 	color:#116ad2;}
 p{
-	font-family:reg;
+	font-family:SFCreg, Arial, Helvetica, sans-serif;
 	font-size:22px;
 	line-height:20px;
 	color:black;}
 
 /*Nav*/
 nav{
+	position:fixed;
+	top:0px;
+	left:0px;
 	width:200px;
-	height:100vh;
-	float:left;
+	height:100%;
 	padding-top:4px;
 	background:black;}
 .navdivs{
 	width:194px;
 	height:34px;
+	line-height:30px;
 	margin:0px 3px 4px 3px;
 	padding:5px;
 	border:2px #00244f solid;
@@ -84,10 +76,21 @@ nav{
 	background: -o-linear-gradient(bottom left, black, #116ad2);
 	background: -moz-linear-gradient(bottom left, black, #116ad2);}
 nav a{
-	font-family:bold;
+	width:100%;
+	height:34px;
+	display:block;
+	font-family:SFCbold, Arial, Helvetica, sans-serif;
 	color:white;
 	font-size:20px;
 	transition:all 0.3s ease-out;}
 nav a:hover{color:#e822ce; font-size:24px;}
 nav a:active{color:#40f81c;}
 nav a:visited{color:#a099ff;}
+
+/*Responsive*/
+@media screen and (max-width:500px) {
+	#wrapper{width:100%; min-width:320px; position:static;}
+	nav{position:static; width:100%; height:auto; padding:4px 0px;}
+	.navdivs{width:96%; margin:0px 2% 4px 2%;}
+	#mainimg{width:100%; float:none;}
+}
