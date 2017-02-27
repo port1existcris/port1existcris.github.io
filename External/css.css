@@ -93,4 +93,6 @@ nav a:visited{color:#a099ff;}
 	nav{position:static; width:100%; height:auto; padding:4px 0px;}
 	.navdivs{width:96%; margin:0px 2% 4px 2%;}
 	#mainimg{width:100%; float:none;}
+	h1{display:none;}
+	p{display:none;}
 }
