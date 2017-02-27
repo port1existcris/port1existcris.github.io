@@ -13,8 +13,7 @@ $(document).ready(function(){
 	$(".navdivs:nth-child(12)").hide(0).show(1900);
 	
 	if($(window).width() < 500){
-		$("h1").slideUp(0).delay(300).slideDown(2000);
-		$("p").slideUp(0).delay(1300).slideDown(2000);
+		$("h1").delay(300).slideDown(2000);
+		$("p").delay(1300).slideDown(2000);
 	}
 });
-
